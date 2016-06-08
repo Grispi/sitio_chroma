@@ -1,0 +1,72 @@
+@import "placeholders";
+
+#top-header {
+  @extend %content;
+  @extend %separator-bottom;
+  min-height: 100px;
+  height: auto !important;
+  height: 100px;
+}
+
+#logo {
+  float: left;
+  width: 40%;
+  margin-top: 13px;
+
+  img {
+    width:170px;
+  }
+}
+
+#primary-nav {
+  float: left;
+  width: 60%;
+  text-align: right;
+}
+
+#menu {
+  margin-top: 30px;
+
+  > li {
+    font-family: helvetica, Arial,sans-serif;
+    font-size: 13px;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+
+    // sub-menu
+    & > ul {
+      display: none;
+      position: absolute;
+      bottom: -35px;
+      padding: 10px;
+      width: 200%;
+      font-size: 90%;
+      text-align: center;
+      left: -65%;
+
+      > li {
+        font-family: helvetica, Arial,sans-serif;
+        font-size: 13px;
+        list-style-type: none;
+        display: inline;
+        margin-left: 30px;
+
+        > a:hover {
+          color:#FCBB04;
+        }
+      }
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+  }
+}
+
+.topMenuImage {
+  width: 33px;
+  margin-bottom: -5px;
+  margin-left: -5px;
+}

@@ -1,0 +1,22 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: $text-color;
+  font: $base-font-size $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family !important;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+a:hover {
+  color: $brand-color;
+}

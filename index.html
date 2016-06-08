@@ -1,0 +1,52 @@
+---
+layout: default
+custom_js:
+  - https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js
+  - javascripts/slides.js
+slides:
+  - title: DISEÑO RESIDENCIAL
+    description: Living. Torre Vista Bahía. Nordelta, Bs As, Argentina.
+    image: /slidesInicio/slide-01.jpg
+  - title: DISEÑO COMERCIAL
+    description: Espacio Biblioteca y Sala de conferencias. Oficinas CYPE. Bs As, Argentina.
+    image: /slidesInicio/slide-02.jpg
+  - title: DISEÑO RESIDENCIAL
+    description: Dormitorio Principal. Torre Vista Bahía. Nordelta, Bs As, Argentina.
+    image: /slidesInicio/slide-03.jpg
+  - title: PROYECTO RESIDENCIAL
+    description: Estar/Cocina, Comedor . Bs As, Argentina.
+    image: /slidesInicio/slide-04.jpg
+  - title: PROYECTO RESIDENCIAL
+    description: Espacio cocina y comedor. Bs As, Argentina.
+    image: /slidesInicio/slide-05.jpg
+---
+
+<div class="slides" data-slick='{"slidesToShow": 1, "autoplay": false, "autoplaySpeed": 3000}'>
+  {% for slide in page.slides %}
+    <div class="slide">
+      <img class="invisible-image" src="{{ slide.image }}" alt=" ">
+      <img class="image" src="{{ slide.image }}" alt=" ">
+      <div class="slide-content">
+        <div class="slide-content-title">{{ slide.title }}</div>
+        <div class="slide-content-description">
+          {{ slide.description }}
+          <br />
+          <br />
+          <a href="http://www.chromainteriores.com/nuevo/" class="view-link"> VER OBRAS </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<section class="homepage">
+  <div class="section-title">
+    <h1>ARQUITECTURA &#038;<br/ >DISEÑO INTERIOR</h1>
+  </div>
+  <div class="section-content">
+    <blockquote>
+      <p>
+        CHROMA es la fusión de arquitectura e interiorismo. Nuestro objetivo es mejorar la experiencia de uso de cada espacio bajo las premisas, funcionalidad, diseño y calidad.
+      </p>
+    </blockquote>
+  </div>
+</section>

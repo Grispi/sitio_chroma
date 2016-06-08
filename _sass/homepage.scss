@@ -1,0 +1,115 @@
+@import "placeholders";
+
+.homepage {
+  @extend %content;
+
+  .section-title {
+    @extend %separator-bottom;
+
+    > h1 {
+      color: $black;
+      font-size: 83px;
+      line-height: 65px;
+    }
+  }
+
+  .section-content {
+    padding: 20px 0 20px 0;
+
+    > blockquote {
+      font-size: 19px;
+      color: $grey-color;
+      padding-left: 40px;
+      border-left: 5px solid #ddd;
+      margin: 0;
+    }
+  }
+}
+
+.slides {
+  width: 100%;
+}
+.slide {
+  width:100%;
+  max-height: 550px;
+  position: relative;
+
+  > .invisible-image {
+    width: 100%;
+    visibility: hidden;
+  }
+
+  > .image {
+    width: 100%;
+    position: absolute;
+    top: -30%;
+  }
+
+  > .slide-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 120px;
+    color: white;
+    text-shadow: 1px 1px #bbb;
+
+    > .slide-content-title {
+      font-size: 75px;
+      line-height: 80px;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    > .slide-content-description {
+      font-style: normal;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: 200;
+      text-align: center;
+
+      > .view-link {
+        text-shadow: none;
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+        background-color: black;
+        padding: 15px;
+        border: 40px;
+        border-radius: 5px;
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+/////////////////// Slick slider overrides
+.slick-arrow {
+  bottom: 40px;
+  top: auto;
+  background: rgba(0,0,0,1);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background: $brand-color;
+  }
+}
+
+.slick-prev {
+  right: 84px;
+  left: auto;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 40px
+}
